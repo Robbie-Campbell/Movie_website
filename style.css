@@ -167,4 +167,7 @@ select{
         display:inline-block;
         margin-top: 1vh;
     }
+    .select::after{
+        min-width: 60vw;
+    }
 }
