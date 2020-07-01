@@ -9,11 +9,11 @@ html{
 
 body{
     background: url("https://images5.alphacoders.com/802/thumb-1920-802668.png") no-repeat center center fixed;
+    position: fixed;
     color: white;
     font-family: "Poppins",sans-serif;
     width: 100vw;
     height: 100vh;
-    object-fit: cover;
 }
 .logo img{
     max-width: 50px;
