@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Film watch list</title>
+    <title>Film list - Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -17,11 +17,10 @@
     <nav class="navbar navbar-light bg-light">
         <div class="container">
             <div class="logo"><img
-                    src="https://lh3.googleusercontent.com/proxy/O1lnAVl1Dcdk2LJ3Dpv798ggF2IgIXyrPIdCI15C0csgS929zQiUwyvP-c90Ak6V1TjvZHsDWpz8TBOI47nowVGbaVXsyOQDjti6ORGoeX1JIuc"
+                    src="https://icons.iconarchive.com/icons/majdi-khawaja/shrek/256/Shrek-4-icon.png"
                     alt="shrek icon">
                 <a class="navbar-brand" href="index.php">Home</a>
             </div>
-            <a href="/review.php/" class="nav-item">Completed</a>
         </div>
     </nav>
         

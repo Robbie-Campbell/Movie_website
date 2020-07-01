@@ -1,7 +1,7 @@
 <footer class ="footer text-center">
     <h1 class="text-uppercase">Find Out More</h1>
       <h6 class="the-pages">
-        <a href="#">About Us </a>
+        <a href="http://127.0.0.1/about-us/">About Us </a>
         <a href="#">Contact Us </a>
         <a href="#">Competition</a>
       </h6>
