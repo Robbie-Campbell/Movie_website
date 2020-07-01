@@ -43,9 +43,13 @@ header{
 
 header, form{
     min-height: 20vh;
-    display: flex;
     justify-content: center;
     align-items: center;
+}
+
+form{
+    display:inline-block;
+    margin-top: 1vh;
 }
 
 form input, form button{
