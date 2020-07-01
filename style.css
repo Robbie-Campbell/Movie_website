@@ -43,20 +43,16 @@ header{
 
 header, form{
     min-height: 20vh;
+    display: flex;
     justify-content: center;
     align-items: center;
-}
-
-form{
-    display:inline-block;
-    margin-top: 1vh;
 }
 
 form input, form button{
     padding: 0.5rem;
     font-size: 2rem;
     background-color: aliceblue;
-    max-width: 55vw;
+    max-width: 70vw;
     border: none;
 }
 form button{
@@ -148,7 +144,6 @@ select{
     padding: 1rem;
     pointer-events: none;
     transition: all 0.3s ease;
-    min-width: 10vw;
 }
 
 .select:hover::after{
@@ -165,4 +160,11 @@ select{
 }
 .the-pages a{
     margin: 30px;
+}
+
+@media only screen and (max-width: 430px){
+    form{
+        display:inline-block;
+        margin-top: 1vh;
+    }
 }
