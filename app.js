@@ -51,9 +51,6 @@ function deleteCheck(e){
         todo.addEventListener("transitionend", function(){
             todo.remove();
         })
-        window.open(
-            "./review.php"
-        )
     }
 
     //Check mark
