@@ -8,8 +8,7 @@ html{
 }
 
 body{
-    background: url("https://images5.alphacoders.com/802/thumb-1920-802668.png") no-repeat center center fixed;
-    position: fixed;
+    background-image: url("https://images5.alphacoders.com/802/thumb-1920-802668.png") center center fixed;
     color: white;
     font-family: "Poppins",sans-serif;
     width: 100vw;
