@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php include "header.php"; ?>
     <div class="container text-center">
         <header>
             <h1 class="title">Films and TV shows</h1>
@@ -24,4 +24,4 @@
             <ul class="todo-list"></ul>
         </div>
     </div>
-<?php get_footer(); ?>
+<?php include "footer.php"; ?>
