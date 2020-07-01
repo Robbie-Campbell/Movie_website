@@ -3,9 +3,7 @@
         <header>
             <h1 class="title">Films and TV shows</h1>
             <p class="text-muted">Do you need a place to store your films and TV shows you need to watch? Why
-                not do it here! </br> Not only can you store that limitless list of films you need to watch but 
-                you can also give them a mark out of ten for them to be stored in the "completed" tab in the navbar 
-                alongside a comment!</p>
+                not do it here! </br>
         </header>
         <form>
             
