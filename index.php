@@ -7,13 +7,13 @@
         </header>
         <form>
             
-            <input type="text" class="todo-input">
-            <button class="todo-button" type="submit">
+            <input type="text" class="film-input">
+            <button class="film-button" type="submit">
                 <i class="fas fa-plus-square"></i>
             </button>
         </form>
-        <div class="todo-container">
-            <ul class="todo-list"></ul>
+        <div class="film-container">
+            <ul class="film-list"></ul>
         </div>
     </div>
 <?php include "footer.php"; ?>

@@ -21,6 +21,7 @@
                     alt="shrek icon">
                 <a class="navbar-brand" href="index.php">Home</a>
             </div>
+            <a href="" class="nav-item"></a>
         </div>
     </nav>
         

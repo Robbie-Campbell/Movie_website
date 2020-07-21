@@ -1,115 +1,115 @@
 // selectors
-const todoInput = document.querySelector(".todo-input");
-const todoButton = document.querySelector(".todo-button");
-const todoList = document.querySelector(".todo-list");
+const filmInput = document.querySelector(".film-input");
+const filmButton = document.querySelector(".film-button");
+const filmList = document.querySelector(".film-list");
 
 //event listeners
-document.addEventListener("DOMContentLoaded", getTodos);
-todoButton.addEventListener('click', addToDo);
-todoList.addEventListener('click', deleteCheck);
+document.addEventListener("DOMContentLoaded", getfilms);
+filmButton.addEventListener('click', addfilm);
+filmList.addEventListener('click', deleteCheck);
 //functions
-function addToDo(event){
+function addfilm(event){
     //Prevent form from submitting
     event.preventDefault();
-    const todoDiv = document.createElement('div');
-    todoDiv.classList.add("todo");
+    const filmDiv = document.createElement('div');
+    filmDiv.classList.add("film");
     // create a LI
-    const newtoDo = document.createElement('li');
-    newtoDo.innerText = todoInput.value;
-    newtoDo.classList.add("todo-item");
-    todoDiv. appendChild(newtoDo);
-    //Add todo to local storaage
-    saveLocalTodos(todoInput.value);
+    const newfilm = document.createElement('li');
+    newfilm.innerText = filmInput.value;
+    newfilm.classList.add("film-item");
+    filmDiv. appendChild(newfilm);
+    //Add film to local storaage
+    saveLocalfilms(filmInput.value);
     // CHECK MARK BUTTON
     const completedButton = document.createElement('button');
     completedButton.innerHTML = "<i class='fas fa-check'></i>";
     completedButton.classList.add('complete-btn');
-    todoDiv.appendChild(completedButton);
+    filmDiv.appendChild(completedButton);
     // TRASH BUTTON
     const trashButton = document.createElement('button');
     trashButton.innerHTML = "<i class='fas fa-trash'></i>";
     trashButton.classList.add('trash-btn');
-    todoDiv.appendChild(trashButton);
+    filmDiv.appendChild(trashButton);
     //APPEND TO LIST
-    todoList.appendChild(todoDiv);
-    // clear the todo
-    todoInput.value = "";
+    filmList.appendChild(filmDiv);
+    // clear the film
+    filmInput.value = "";
 }
 
 
 function deleteCheck(e){
     const item = e.target;
     title = e.path[2].innerText
-    //delete todo
+    //delete film
     if(item.classList[0] === "trash-btn")
     {
-        const todo = item.parentElement;
-        todo.classList.add("fall");
-        removeLocalTodos(todo);
-        todo.addEventListener("transitionend", function(){
-            todo.remove();
+        const film = item.parentElement;
+        film.classList.add("fall");
+        removeLocalfilms(film);
+        film.addEventListener("transitionend", function(){
+            film.remove();
         })
     }
 
     //Check mark
     if(item.classList[0] === "complete-btn")
     {
-        const todo = item.parentElement;
-        todo.classList.toggle("completed");
+        const film = item.parentElement;
+        film.classList.toggle("completed");
     }
 }
 
-function saveLocalTodos(todo){
-    //Check is there a todo folder
+function saveLocalfilms(film){
+    //Check is there a film folder
+    let films;
+    if(localStorage.getItem('films') === null){
+        films = [];
+    }else{
+        films = JSON.parse(localStorage.getItem('films'));
+    }
+    films.push(film);
+    localStorage.setItem('films', JSON.stringify(films));
+}
+
+function getfilms(){
     let todos;
     if(localStorage.getItem('todos') === null){
         todos = [];
     }else{
         todos = JSON.parse(localStorage.getItem('todos'));
     }
-    todos.push(todo);
-    localStorage.setItem('todos', JSON.stringify(todos));
-}
-
-function getTodos(){
-    let todos;
-    if(localStorage.getItem('todos') === null){
-        todos = [];
-    }else{
-        todos = JSON.parse(localStorage.getItem('todos'));
-    }
-    todos.forEach(function(todo){
+    todos.forEach(function(film){
         event.preventDefault();
-        const todoDiv = document.createElement('div');
-        todoDiv.classList.add("todo");
+        const filmDiv = document.createElement('div');
+        filmDiv.classList.add("film");
         // create a LI
-        const newtoDo = document.createElement('li');
-        newtoDo.innerText = todo;
-        newtoDo.classList.add("todo-item");
-        todoDiv. appendChild(newtoDo);
+        const newfilm = document.createElement('li');
+        newfilm.innerText = film;
+        newfilm.classList.add("film-item");
+        filmDiv. appendChild(newfilm);
         // CHECK MARK BUTTON
         const completedButton = document.createElement('button');
         completedButton.innerHTML = "<i class='fas fa-check'></i>";
         completedButton.classList.add('complete-btn');
-        todoDiv.appendChild(completedButton);
+        filmDiv.appendChild(completedButton);
         // TRASH BUTTON
         const trashButton = document.createElement('button');
         trashButton.innerHTML = "<i class='fas fa-trash'></i>";
         trashButton.classList.add('trash-btn');
-        todoDiv.appendChild(trashButton);
+        filmDiv.appendChild(trashButton);
         //APPEND TO LIST
-        todoList.appendChild(todoDiv);
+        filmList.appendChild(filmDiv);
     });
 }
 
-function removeLocalTodos(todo){
-    let todos;
-    if(localStorage.getItem('todos') === null){
-        todos = [];
+function removeLocalFilms(film){
+    let films;
+    if(localStorage.getItem('films') === null){
+        films = [];
     }else{
-        todos = JSON.parse(localStorage.getItem('todos'));
+        films = JSON.parse(localStorage.getItem('films'));
     }
-    const todoIndex = todo.children[0].innerText;
-    todos.splice(todos.indexOf(todoIndex), 1);
-    localStorage.setItem("todos", JSON.stringify(todos));
+    const filmIndex = film.children[0].innerText;
+    films.splice(films.indexOf(filmIndex), 1);
+    localStorage.setItem("films", JSON.stringify(films));
 }
